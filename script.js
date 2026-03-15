@@ -34,6 +34,24 @@
   const yearEl = document.querySelector('.footer .year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+  // Mobile menu
+  const menuBtn = document.querySelector('.menu-btn');
+  const nav = document.querySelector('.nav');
+  if (menuBtn && nav) {
+    menuBtn.addEventListener('click', function () {
+      document.body.classList.toggle('menu-open');
+      menuBtn.setAttribute('aria-expanded', document.body.classList.contains('menu-open'));
+      menuBtn.setAttribute('aria-label', document.body.classList.contains('menu-open') ? 'Close menu' : 'Menu');
+    });
+    nav.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        document.body.classList.remove('menu-open');
+        menuBtn.setAttribute('aria-expanded', 'false');
+        menuBtn.setAttribute('aria-label', 'Menu');
+      });
+    });
+  }
+
   // Reels player
   const overlay = document.getElementById('player-overlay');
   const backdrop = overlay && overlay.querySelector('.player-backdrop');
