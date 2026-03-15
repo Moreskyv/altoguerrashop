@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Altoguerra — Video Editor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="grain"></div>
+
+  <header class="header">
+    <a href="#" class="logo" data-text="ALTOGUERRA">ALTOGUERRA</a>
+    <nav class="nav">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="menu-btn" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="hero-tag animate-in">Video Editor & Motion</p>
+      <h1 class="hero-title">
+        <span class="line animate-in" style="--i: 0">Cut.</span>
+        <span class="line animate-in" style="--i: 1">Color.</span>
+        <span class="line animate-in" style="--i: 2">Ship.</span>
+      </h1>
+      <p class="hero-desc animate-in" style="--i: 3">Crafting stories frame by frame.</p>
+      <a href="#work" class="hero-cta animate-in" style="--i: 4">
+        <span>View reel</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </section>
+
+    <section id="work" class="work">
+      <h2 class="section-title animate-on-scroll">
+        <span class="section-num">01</span>
+        Selected work
+      </h2>
+      <div class="reel">
+        <article class="reel-item animate-on-scroll" style="--delay: 0" data-video-src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" data-poster="">
+          <button type="button" class="reel-thumb" aria-label="Play Project Alpha">
+            <video class="reel-preview" muted loop playsinline preload="metadata"></video>
+            <span class="reel-play-icon" aria-hidden="true"></span>
+            <span class="reel-label">Music video</span>
+          </button>
+          <h3>Project Alpha</h3>
+          <p>Edit • Color • VFX</p>
+        </article>
+        <article class="reel-item animate-on-scroll" style="--delay: 1" data-video-src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4" data-poster="">
+          <button type="button" class="reel-thumb" aria-label="Play Brand campaign">
+            <video class="reel-preview" muted loop playsinline preload="metadata"></video>
+            <span class="reel-play-icon" aria-hidden="true"></span>
+            <span class="reel-label">Commercial</span>
+          </button>
+          <h3>Brand campaign</h3>
+          <p>Edit • Motion</p>
+        </article>
+        <article class="reel-item animate-on-scroll" style="--delay: 2" data-video-src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4" data-poster="">
+          <button type="button" class="reel-thumb" aria-label="Play Narrative piece">
+            <video class="reel-preview" muted loop playsinline preload="metadata"></video>
+            <span class="reel-play-icon" aria-hidden="true"></span>
+            <span class="reel-label">Short film</span>
+          </button>
+          <h3>Narrative piece</h3>
+          <p>Edit • Color • Sound</p>
+        </article>
+        <article class="reel-item animate-on-scroll" style="--delay: 3" data-video-src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4" data-poster="">
+          <button type="button" class="reel-thumb" aria-label="Play Doc series">
+            <video class="reel-preview" muted loop playsinline preload="metadata"></video>
+            <span class="reel-play-icon" aria-hidden="true"></span>
+            <span class="reel-label">Documentary</span>
+          </button>
+          <h3>Doc series</h3>
+          <p>Edit • Color</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <h2 class="section-title animate-on-scroll">
+        <span class="section-num">02</span>
+        About
+      </h2>
+      <div class="about-content animate-on-scroll">
+        <p class="about-text">
+          Altoguerra is a video editor and motion designer focused on rhythm, mood, and clean storytelling. From music videos to commercials and short films — every cut serves the story.
+        </p>
+        <ul class="about-tools">
+          <li>DaVinci Resolve</li>
+          <li>Premiere Pro</li>
+          <li>After Effects</li>
+          <li>Touch Designer</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2 class="section-title animate-on-scroll">
+        <span class="section-num">03</span>
+        Get in touch
+      </h2>
+      <a href="https://www.instagram.com/altoguerra/" class="contact-email animate-on-scroll">Instagram: @altoguerra</a>
+      <div class="contact-social animate-on-scroll">
+        <a href="https://t.me/altoguerra" aria-label="Vimeo">Telegram</a>
+        <a href="https://altoguerra.ru" aria-label="Instagram">Social</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span class="year"></span> Altoguerra. All rights reserved.</p>
+  </footer>
+
+  <!-- Reels player modal (9:16 format) -->
+  <div class="player-overlay" id="player-overlay" aria-hidden="true">
+    <div class="player-backdrop"></div>
+    <div class="player-container">
+      <button type="button" class="player-close" aria-label="Close player">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+      <div class="player-reel">
+        <video class="player-video" controls playsinline></video>
+      </div>
+      <p class="player-title"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
